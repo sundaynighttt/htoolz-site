@@ -37,4 +37,5 @@ _flutter.buildConfig = {"engineRevision":"42d3d75a56efe1a2e9902f52dc8006099c45d9
 
 
 // 서비스 워커(오프라인 캐시)는 쓰지 않는다. 고친 판이 바로 보이게 하려는 것이다(docs/design.md "공개 웹").
-_flutter.loader.load();
+// 대체 글꼴(Roboto)은 Google 서버 대신 이 사이트의 fonts/에서 받는다. 없는 글꼴은 받지 않고 넘어간다.
+_flutter.loader.load({ config: { fontFallbackBaseUrl: 'fonts/' } });
